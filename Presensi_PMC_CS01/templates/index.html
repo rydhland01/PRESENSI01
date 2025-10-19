@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Presensi PMC CS-01</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body class="light">
+  <header class="header-card">
+    <div class="header-center">
+      <img src="{{ url_for('static', filename='assets/HDDAP.png') }}" alt="HDDAP" class="header-logo">
+      <div class="header-text">
+        <div class="main-title">Presensi PMC CS-01</div>
+        <div class="sub-title">powered by <strong>Rydhland</strong></div>
+      </div>
+    </div>
+    <div class="header-right">
+      <button id="themeToggle" class="theme-toggle" title="Ganti tema">🌙</button>
+    </div>
+  </header>
+
+  <main class="center">
+    <section class="login-card card">
+      <h2>Selamat Datang</h2>
+      <p class="small-note">Silakan login untuk akses. Jika belum memiliki akun, buat baru melalui tombol di bawah.</p>
+
+      <label>Username</label>
+      <input id="loginUser" type="text" placeholder="ketik username" autocomplete="off">
+
+      <label>Password</label>
+      <input id="loginPass" type="password" placeholder="ketik password">
+
+      <div style="text-align:center;margin-top:10px;">
+        <button id="btnLogin" class="btn-primary">Masuk</button>
+      </div>
+
+      <div style="text-align:center;margin-top:10px;">
+        <button id="btnRegister" class="btn-ghost">Daftar Akun Baru</button>
+      </div>
+
+      <div style="text-align:center;margin-top:10px;">
+        <button id="btnForgot" class="btn-ghost">Lupa Password</button>
+      </div>
+
+      <div style="text-align:center;margin-top:10px;">
+        <a href="https://wa.me/6283173501710" target="_blank" class="btn-ghost">Hubungi Admin</a>
+      </div>
+
+      <div style="text-align:center;margin-top:20px;">
+        <div class="kv">BELUM FINAL / <code>UNTUK UJI COBA</code><br>Dibuat oleh Riyadh</div>
+      </div>
+    </section>
+  </main>
+
+  <div id="registerPopup" class="popup hidden" aria-hidden="true">
+    <div class="popup-card card">
+      <h3>Buat Akun Baru</h3>
+      <label>Username</label>
+      <input id="newUsername" placeholder="username baru" autocomplete="off">
+      <label>Password</label>
+      <input id="newPassword" type="password" placeholder="password baru">
+      <div class="popup-actions" style="text-align:right;margin-top:12px;">
+        <button id="saveRegister" class="btn-primary">Simpan</button>
+        <button id="cancelRegister" class="btn-ghost">Batal</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
